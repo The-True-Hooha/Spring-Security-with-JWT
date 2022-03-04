@@ -13,6 +13,7 @@ public interface UserService {
 
     void addRoleToUser (String username, String roleName); //ensure that no two users are added with the same username
     AppUser getUser(String username); //gets a particular username
+    AppUser getEmail(String email);
     List<AppUser> getAllUsers(); //return a list of all the users
 
 }
