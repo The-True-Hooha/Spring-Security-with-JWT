@@ -28,7 +28,7 @@ public class SpringSecurityWithJwtApplication {
 	@Bean
 	CommandLineRunner runner (UserService userService) {
 		return args -> {
-			userService.saveRole(new AppRole(null, "Regulator"));
+			userService.saveRole(new AppRole(null, "user"));
 			userService.saveRole(new AppRole(null, "Moderator"));
 			userService.saveRole(new AppRole(null, "ADMIN"));
 			userService.saveRole(new AppRole(null, "Contributor"));
@@ -49,7 +49,7 @@ public class SpringSecurityWithJwtApplication {
 			userService.saveUser(new AppUser(null, "Annabel Bean", "anna4real", "anna4real123",
 					"anna4real@yahoo.com", new ArrayList<>()));
 
-			userService.addRoleToUser("john", "Regulator");
+			userService.addRoleToUser("john", "user");
 			userService.addRoleToUser("mic", "Moderator");
 			userService.addRoleToUser("graceG", "ADMIN");
 			userService.addRoleToUser("purity", "Contributor");

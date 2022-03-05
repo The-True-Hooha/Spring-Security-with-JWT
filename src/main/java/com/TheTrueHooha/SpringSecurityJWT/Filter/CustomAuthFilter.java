@@ -57,7 +57,7 @@ public class CustomAuthFilter extends UsernamePasswordAuthenticationFilter {
                 .withSubject(user.getUsername())
                 .withExpiresAt(new Date(System.currentTimeMillis() + 0 * 60 * 1000))
                 .withIssuer(request.getRequestURI())
-                .withClaim("roles", user.getAuthorities().stream().map(GrantedAuthority::getAuthority)
+                .withClaim("authority", user.getAuthorities().stream().map(GrantedAuthority::getAuthority)
                         .collect(Collectors.joining()))
                 .sign(algorithm);
 
