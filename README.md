@@ -25,6 +25,30 @@ tom manage authentication etc. For more details about JWT, check **[here](https:
 > USAGE:
 > ****
 > 
+> Add JWT to maven list of dependencies
+> 
+>  [version](https://mvnrepository.com/artifact/com.auth0/java-jwt)
+> 
+>`
+> <dependency>
+> `
+> 
+> `
+> <groupId>com.auth0</groupId> 
+> `
+> 
+> `
+> <artifactId>java-jwt</artifactId>
+> `
+> 
+> `
+    <version>3.18.3</version>
+> `
+> 
+> `
+</dependency>
+>`
+> 
 > 
 >
 
